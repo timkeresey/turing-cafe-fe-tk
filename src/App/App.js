@@ -12,6 +12,10 @@ class App extends Component {
     }
   }
 
+  addRes = newRes => {
+    this.setState({ reservations: [...this.state.reservations, newRes] });
+  }
+
   componentDidMount() {
     getAllRes()
     .then(data => this.setState({ reservations: data }))
