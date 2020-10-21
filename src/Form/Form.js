@@ -38,6 +38,7 @@ class Form extends Component {
   render() {
     return (
       <form>
+      <h2>New Reservation</h2>
         <input
         type='text'
         name='name'
@@ -55,7 +56,7 @@ class Form extends Component {
         <input
         type='text'
         name='time'
-        placeholder='time (12:00)'
+        placeholder='Time (12:00)'
         value={this.state.time}
         onChange={e => this.inputsChange(e)}
         />
@@ -64,7 +65,7 @@ class Form extends Component {
         min='1'
         max='20'
         name='number'
-        placeholder='guests'
+        placeholder='Guests'
         value={this.state.number}
         onChange={e => this.inputsChange(e)}
         />
