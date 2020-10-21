@@ -23,6 +23,16 @@ class Form extends Component {
       ...this.state
     }
     this.props.addRes(newRes);
+    this.clearInputs();
+  }
+
+  clearInputs = () => {
+    this.setState({
+      name: '',
+      date: '',
+      time: '',
+      number: undefined
+    })
   }
 
   render() {
@@ -46,7 +56,7 @@ class Form extends Component {
         type='text'
         name='time'
         placeholder='time (12:00)'
-        value={this.state.time} 
+        value={this.state.time}
         onChange={e => this.inputsChange(e)}
         />
         <input
