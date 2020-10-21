@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+import { getAllRes } from '../apiCalls.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reservations: []
+    }
+  }
+
+  componentDidMount() {
+    getAllRes()
+    .then(data => this.setState({ reservations: data }))
+  }
+
   render() {
     return (
       <div className="App">
