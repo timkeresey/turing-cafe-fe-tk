@@ -1,11 +1,11 @@
 import React from 'react';
 import './ResContainer.css';
-import { getAllRes } from '../apiCalls.js';
+import Reservation from '../Reservation/Reservation.js'
 
 const ResContainer = { reservations } => {
   const resCards = reservatinons.map(res => {
     return (
-      <Res
+      <Reservation
         name={res.name}
         date={res.date}
         time={res.time}
@@ -13,6 +13,7 @@ const ResContainer = { reservations } => {
       />
     )
   })
+
   return (
     {resCards}
   )
