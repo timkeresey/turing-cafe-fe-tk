@@ -1,7 +1,7 @@
 import React from 'react';
 import './Reservation.css';
 
-const Reservation = { name, date, time, guestsNum } => {
+const Reservation = ({ name, date, time, guestsNum }) => {
   return (
     <div>
       <h2>{name}</h2>
