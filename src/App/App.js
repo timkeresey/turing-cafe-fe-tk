@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { getAllRes } from '../apiCalls.js';
 import ResContainer from '../ResContainer/ResContainer.js';
+import Form from '../Form/Form.js';
 
 class App extends Component {
   constructor() {
