@@ -2,8 +2,8 @@ import React from 'react';
 import './ResContainer.css';
 import Reservation from '../Reservation/Reservation.js'
 
-const ResContainer = { reservations } => {
-  const resCards = reservatinons.map(res => {
+const ResContainer = ({ reservations })=> {
+  const resCards = reservations.map(res => {
     return (
       <Reservation
         name={res.name}
@@ -15,7 +15,9 @@ const ResContainer = { reservations } => {
   })
 
   return (
-    {resCards}
+    <div>
+      {resCards}
+    </div>
   )
 }
 
