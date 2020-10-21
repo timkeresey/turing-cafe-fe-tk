@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-// import userEvent from '@testing-library/user-event';
+import userEvent from '@testing-library/user-event';
 import Form from './Form.js';
 
 describe('Form', () => {
@@ -16,5 +16,12 @@ describe('Form', () => {
     expect(screen.getByPlaceholderText('Time (12:00)')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Guests')).toBeInTheDocument();
   });
-  
+
+  it('should display the value of what is entered into input fields', () => {
+    const fakeAddRes = jest.fn();
+    render(<Form addRes={fakeAddRes}/>);
+
+    userEvent.type()
+    // ran out of time here 
+  })
 })
