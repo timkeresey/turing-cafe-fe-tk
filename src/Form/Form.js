@@ -16,6 +16,15 @@ class Form extends Component {
     this.setState({ [e.target.name]: e.target.value })
   }
 
+  submitRes = e => {
+    e.preventDefault();
+    const newRes = {
+      id: Date.now(),
+      ...this.state
+    }
+    this.props.addRes(newRes);
+  }
+
   render() {
     return (
       <form>
@@ -37,7 +46,7 @@ class Form extends Component {
         type='text'
         name='time'
         placeholder='time (12:00)'
-        value={this.state.time}
+        value={this.state.time} 
         onChange={e => this.inputsChange(e)}
         />
         <input
@@ -49,7 +58,7 @@ class Form extends Component {
         value={this.state.number}
         onChange={e => this.inputsChange(e)}
         />
-        <button>Submit</button>
+        <button onClick={e => this.submitRes(e)}>Submit</button>
       </form>
     )
   }
